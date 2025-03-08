@@ -34,7 +34,9 @@ export default function HeroSection() {
             <Image
               src="/homeImage.png"
               alt="Students learning online"
-              className="max-w-full h-auto"
+              className="max-w-full h-auto shadow-[4px_7px_8px_4px_#6b6b6b] rounded-lg"
+              width="500"
+              height="500"
             />
           </div>
         </div>
