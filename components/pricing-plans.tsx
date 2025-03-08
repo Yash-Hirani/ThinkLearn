@@ -1,6 +1,13 @@
-import { Check } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Check } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
 export default function PricingPlans() {
   const plans = [
@@ -46,14 +53,19 @@ export default function PricingPlans() {
       popular: false,
       buttonText: "Contact Sales",
     },
-  ]
+  ];
 
   return (
-    <section className="w-full py-12 md:py-24 bg-muted" id="pricing">
-      <div className="container px-4 md:px-6">
+    <section
+      className="w-full py-12 md:py-24 bg-gradient-to-br from-[#040139] via-[#370979] via-22% to-[#a023e4] to-77% "
+      id="pricing"
+    >
+      <div className="container px-4 md:px-6 ">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Our Pricing Plans</h2>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white">
+              Our Pricing Plans
+            </h2>
             <p className="max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               Choose the perfect plan for your learning journey
             </p>
@@ -61,7 +73,12 @@ export default function PricingPlans() {
         </div>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 mt-12">
           {plans.map((plan, index) => (
-            <Card key={index} className={`flex flex-col ${plan.popular ? "border-primary shadow-lg" : ""}`}>
+            <Card
+              key={index}
+              className={`flex flex-col ${
+                plan.popular ? "border-primary shadow-lg" : ""
+              }`}
+            >
               {plan.popular && (
                 <div className="absolute top-0 right-0 transform translate-x-2 -translate-y-2">
                   <span className="bg-primary text-primary-foreground text-xs font-semibold px-3 py-1 rounded-full">
@@ -75,7 +92,9 @@ export default function PricingPlans() {
                   <span className="text-4xl font-extrabold">{plan.price}</span>
                   <span className="ml-1 text-muted-foreground">/month</span>
                 </div>
-                <CardDescription className="mt-2">{plan.description}</CardDescription>
+                <CardDescription className="mt-2">
+                  {plan.description}
+                </CardDescription>
               </CardHeader>
               <CardContent className="flex-grow">
                 <ul className="space-y-3">
@@ -88,7 +107,10 @@ export default function PricingPlans() {
                 </ul>
               </CardContent>
               <CardFooter>
-                <Button className="w-full" variant={plan.popular ? "default" : "outline"}>
+                <Button
+                  className="w-full"
+                  variant={plan.popular ? "default" : "outline"}
+                >
                   {plan.buttonText}
                 </Button>
               </CardFooter>
@@ -97,6 +119,5 @@ export default function PricingPlans() {
         </div>
       </div>
     </section>
-  )
+  );
 }
-
