@@ -1,42 +1,58 @@
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
+import Link from "next/link";
+import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-background to-muted">
-      <div className="container px-4 md:px-6">
+    <section className="w-full md:py-10  bg-gradient-to-b from-background to-muted">
+      <div className="container  md:px-6">
         <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
           <div className="flex flex-col justify-center space-y-4">
             <div className="space-y-2">
               <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                Unlock Your Learning Potential
+                Empower Your <span className="text-purple-700">future </span>
+                with Expert Tech Courses at{" "}
+                <span className="text-purple-700">ThinkLance</span>
               </h1>
               <p className="max-w-[600px] text-muted-foreground md:text-xl">
-                Thinklance Edutech provides high-quality online courses for students and professionals. Learn at your
-                own pace and advance your career with our expert-led programs.
+                Unlock the Secrets of Web Development, AI, Machine Learning, and
+                Data Science with Our Top-Rated Programs!
               </p>
             </div>
-            <div className="flex flex-col gap-2 min-[400px]:flex-row">
-              <Button size="lg" asChild>
-                <Link href="/courses">Explore Courses</Link>
-              </Button>
-              <Button size="lg" variant="outline" asChild>
-                <Link href="/register">Get Started</Link>
-              </Button>
+            <div>
+              <Link
+                href="/courses"
+                className="relative flex h-10 w-60 bg-purple-700 items-center justify-center overflow-hidden rounded-xl shadow-md transition-all hover:scale-300 group"
+              >
+                <span className="absolute h-full w-full -translate-x-full  translate-y-full rotate-45 transition-all duration-700 bg-gradient-to-r from-[#DD88CF] to-[#F8E7F6] group-hover:translate-x-[25%] group-hover:translate-y-[-15%]"></span>
+                <span className="relative z-19 text-lg font-semibold text-[#FFFAFA] transition-all group-hover:text-white">
+                  Explore Courses
+                </span>
+              </Link>
             </div>
           </div>
-          <div className="mx-auto lg:ml-auto flex items-center justify-center">
-            <div className="relative w-full max-w-[500px] aspect-video rounded-xl overflow-hidden shadow-xl">
-              <img
-                src="/placeholder.svg?height=500&width=800"
-                alt="Students learning online"
-                className="object-cover w-full h-full"
-              />
-            </div>
+          <div className="rounded-xl ml-20">
+            <Image
+              src="/homeImage.png"
+              alt="Students learning online"
+              className="max-w-full h-auto"
+            />
           </div>
         </div>
+        <p className="mt-10 max-w-full text-muted-foreground md:text-xl text-center mx-auto">
+          <span className="text-black font-bold"> Thinklance Edutech</span> is
+          one of the finest
+          <span className="text-black font-bold"> Elearning</span> platforms for
+          all students and professionals that facilitates studying
+          <span className="text-black font-bold">
+            top-notch technical certification
+          </span>
+          courses from
+          <span className="text-black font-bold">
+            profound industry experts
+          </span>
+          with the best study resources.
+        </p>
       </div>
     </section>
-  )
+  );
 }
-
