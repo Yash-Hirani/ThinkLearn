@@ -52,11 +52,19 @@ export default function Navbar() {
             className="flex items-center space-x-2 group no-underline hover:no-underline"
           >
             <span className="text-lg font-semibold text-black center-underline">
-              Quiz
+              Home
             </span>
           </Link>
           <Link
             href="/"
+            className="flex items-center space-x-2 group no-underline hover:no-underline"
+          >
+            <span className="text-lg font-semibold text-black center-underline">
+              Quiz
+            </span>
+          </Link>
+          <Link
+            href="/courses"
             className="flex items-center space-x-2 group no-underline hover:no-underline"
           >
             <span className="text-lg font-semibold text-black center-underline">
@@ -68,15 +76,7 @@ export default function Navbar() {
             className="flex items-center space-x-2 group no-underline hover:no-underline"
           >
             <span className="text-lg font-semibold text-black center-underline">
-              Career Portal
-            </span>
-          </Link>
-          <Link
-            href="/"
-            className="flex items-center space-x-2 group no-underline hover:no-underline"
-          >
-            <span className="text-lg font-semibold text-black center-underline">
-              Register
+              Career portal
             </span>
           </Link>
           <Link
