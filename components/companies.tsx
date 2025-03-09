@@ -39,10 +39,10 @@ const SplideCarousel: React.FC = () => {
           Our Alumni Work At
         </h1>
         <ul className="splide__list">
-          <li className="splide__slide">
+          <li className="splide__slide pl-7">
             <Image src="/amazon.png" alt="Slide 1" width="300" height="200" />
           </li>
-          <li className="splide__slide">
+          <li className="splide__slide pl-4">
             <Image src="/nvidia.png" alt="Slide 2" width="400" height="200" />
           </li>
           <li className="splide__slide">
@@ -54,7 +54,7 @@ const SplideCarousel: React.FC = () => {
           <li className="splide__slide">
             <Image src="/oracle.png" alt="Slide 5" width="200" height="200" />
           </li>
-          <li className="splide__slide">
+          <li className="splide__slide pr-3">
             <Image src="/samsung.png" alt="Slide 6" width="400" height="200" />
           </li>
         </ul>
