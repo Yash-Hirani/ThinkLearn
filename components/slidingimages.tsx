@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Splide from "@splidejs/splide";
 import { Options } from "@splidejs/splide";
 import "@splidejs/splide/css";
+import Image from "next/image"; // Import the correct Image component from Next.js
 
 // Custom hook for Splide
 function useSplide(options?: Options) {
@@ -14,7 +15,7 @@ function useSplide(options?: Options) {
 
     const splide = new Splide(splideRef.current, {
       type: "loop", // Enable looping
-      perPage: 1, // Show 3 images per slide
+      perPage: 1, // Show 1 image per slide
       arrows: true,
       pagination: true,
       gap: "1rem",
@@ -79,11 +80,16 @@ const SplideSliderWithProgress: React.FC<SliderProps> = ({
                 key={slide.id}
                 className="splide__slide p-2 flex justify-center items-center"
               >
-                <img
-                  src={slide.imageUrl}
-                  alt="slide"
-                  className="w-80 h-64 object-cover rounded-lg shadow-md"
-                />
+                <div className="w-80 h-64 relative">
+                  <Image
+                    src={slide.imageUrl}
+                    alt="slide"
+                    fill // Fill the parent container
+                    sizes="(max-width: 768px) 100vw, 50vw" // Optimize for responsive images
+                    style={{ objectFit: "cover" }} // Ensure the image covers the container
+                    className="rounded-lg shadow-md"
+                  />
+                </div>
               </li>
             ))}
           </ul>
@@ -104,9 +110,9 @@ const SplideSliderWithProgress: React.FC<SliderProps> = ({
 // Example component with images
 export const ImageSlider: React.FC = () => {
   const images = [
-    { id: 1, imageUrl: "student1.jpg" },
-    { id: 2, imageUrl: "student2.jpeg" },
-    { id: 3, imageUrl: "student3.jpeg" },
+    { id: 1, imageUrl: "/student1.jpg" },
+    { id: 2, imageUrl: "/student2.jpeg" },
+    { id: 3, imageUrl: "/student3.jpeg" },
   ];
 
   return (

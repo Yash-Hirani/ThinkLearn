@@ -5,6 +5,8 @@ import PricingPlans from "@/components/pricing-plans";
 import Testimonials from "@/components/testimonials";
 import Footer from "@/components/footer";
 import StatsBanner from "@/components/statsbanner";
+import SplideCarousel from "@/components/companies";
+import TimelineComponent from "@/components/timeline";
 
 export default function Home() {
   return (
@@ -14,7 +16,11 @@ export default function Home() {
         <HeroSection />
         <StatsBanner />
         <HowItWorks />
+        <TimelineComponent />
         <PricingPlans />
+
+        <SplideCarousel />
+
         <Testimonials />
       </main>
       <Footer />

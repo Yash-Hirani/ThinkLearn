@@ -15,9 +15,6 @@ export default function PricingPlans() {
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white">
               Our Pricing Plans
             </h2>
-            <p className="max-w-[700px] text-gray-200 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Choose the perfect plan for your learning journey
-            </p>
           </div>
         </div>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3 mt-12">
