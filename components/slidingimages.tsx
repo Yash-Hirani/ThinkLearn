@@ -18,11 +18,11 @@ function useSplide(options?: Options) {
       arrows: true,
       pagination: true,
       gap: "1rem",
-      autoplay: true, // Enable automatic sliding
-      interval: 3000, // Slide every 3 seconds
+      autoplay: true,
+      interval: 3000,
       pauseOnHover: true, // Pause when hovered
       breakpoints: {
-        1024: { perPage: 2 }, // Adjust for medium screens
+        700: { perPage: 2 }, // Adjust for medium screens
         640: { perPage: 1 }, // Adjust for small screens
       },
       ...options,
@@ -70,16 +70,19 @@ const SplideSliderWithProgress: React.FC<SliderProps> = ({
   const { splideRef, progressBarRef } = useSplide(options);
 
   return (
-    <div className={`w-full ${className}`}>
+    <div className={`${className}`}>
       <div ref={splideRef} className="splide">
         <div className="splide__track">
           <ul className="splide__list">
             {slides.map((slide) => (
-              <li key={slide.id} className="splide__slide p-2">
+              <li
+                key={slide.id}
+                className="splide__slide p-2 flex justify-center items-center"
+              >
                 <img
                   src={slide.imageUrl}
                   alt="slide"
-                  className="w-full h-64 object-cover rounded-lg shadow-md"
+                  className="w-80 h-64 object-cover rounded-lg shadow-md"
                 />
               </li>
             ))}

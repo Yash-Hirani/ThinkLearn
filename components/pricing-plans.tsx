@@ -1,121 +1,113 @@
-import { Check } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+"use client";
 
 export default function PricingPlans() {
-  const plans = [
-    {
-      name: "Basic",
-      price: "$9.99",
-      description: "Perfect for beginners",
-      features: [
-        "Access to 50+ basic courses",
-        "Basic quizzes and assessments",
-        "Email support",
-        "Course completion certificates",
-      ],
-      popular: false,
-      buttonText: "Get Started",
-    },
-    {
-      name: "Pro",
-      price: "$19.99",
-      description: "For serious learners",
-      features: [
-        "Access to 200+ courses",
-        "Advanced quizzes and assessments",
-        "Priority email support",
-        "Course completion certificates",
-        "Career guidance sessions",
-      ],
-      popular: true,
-      buttonText: "Get Pro",
-    },
-    {
-      name: "Enterprise",
-      price: "$49.99",
-      description: "For teams and organizations",
-      features: [
-        "Access to all courses",
-        "Custom learning paths",
-        "24/7 priority support",
-        "Course completion certificates",
-        "Career guidance sessions",
-        "Custom reporting and analytics",
-      ],
-      popular: false,
-      buttonText: "Contact Sales",
-    },
-  ];
-
   return (
     <section
-      className="w-full py-12 md:py-24 bg-gradient-to-br from-[#040139] via-[#370979] via-22% to-[#a023e4] to-77% "
+      className="w-full py-12 md:py-24 bg-cover bg-center bg-no-repeat relative"
       id="pricing"
+      style={{ backgroundImage: "url('/pricebg.jpeg')" }}
     >
-      <div className="container px-4 md:px-6 ">
+      <div className="absolute inset-0 bg-black/60"></div>
+
+      <div className="container px-4 md:px-6 relative z-10">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white">
               Our Pricing Plans
             </h2>
-            <p className="max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+            <p className="max-w-[700px] text-gray-200 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               Choose the perfect plan for your learning journey
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 mt-12">
-          {plans.map((plan, index) => (
-            <Card
-              key={index}
-              className={`flex flex-col ${
-                plan.popular ? "border-primary shadow-lg" : ""
-              }`}
-            >
-              {plan.popular && (
-                <div className="absolute top-0 right-0 transform translate-x-2 -translate-y-2">
-                  <span className="bg-primary text-primary-foreground text-xs font-semibold px-3 py-1 rounded-full">
-                    Popular
-                  </span>
-                </div>
-              )}
-              <CardHeader>
-                <CardTitle>{plan.name}</CardTitle>
-                <div className="flex items-baseline justify-center mt-4">
-                  <span className="text-4xl font-extrabold">{plan.price}</span>
-                  <span className="ml-1 text-muted-foreground">/month</span>
-                </div>
-                <CardDescription className="mt-2">
-                  {plan.description}
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="flex-grow">
-                <ul className="space-y-3">
-                  {plan.features.map((feature, i) => (
-                    <li key={i} className="flex items-center">
-                      <Check className="h-4 w-4 text-primary mr-2" />
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-              <CardFooter>
-                <Button
-                  className="w-full"
-                  variant={plan.popular ? "default" : "outline"}
-                >
-                  {plan.buttonText}
-                </Button>
-              </CardFooter>
-            </Card>
-          ))}
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-3 mt-12">
+          {/* Left Plan (Smaller) */}
+          <div className="transform scale-90 hover:scale-95 transition-transform">
+            <div className="bg-[linear-gradient(142deg,rgba(153,78,204,1)_3%,rgba(62,24,122,1)_100%)] rounded-3xl p-6 text-white flex flex-col h-full">
+              <div className="bg-white text-black w-fit px-6 py-2 rounded-full font-bold mb-6 mx-auto">
+                Starter Program
+              </div>
+              <div className="text-center mb-6">
+                <span className="text-2xl">$</span>
+                <span className="text-8xl font-bold">299</span>
+              </div>
+              <div className="space-y-2 text-center flex-grow">
+                <p>Live Sessions (2-months)</p>
+                <p>Hands-on Projects</p>
+                <p>Certifications</p>
+                <p>Mentor Guidance</p>
+                <p>Recorded Sessions</p>
+                <p>1 Minor Project</p>
+                <p>1 Major Project</p>
+                <p>Course Completion Certificate</p>
+              </div>
+              <div className="border-t border-white/30 my-6"></div>
+              <button className="bg-transparent border-2 border-white text-white rounded-full py-3 px-6 font-bold hover:bg-white/10 transition-all mx-auto block">
+                CHOOSE PLAN
+              </button>
+            </div>
+          </div>
+
+          {/* Middle Plan (Larger) */}
+          <div className="transform scale-105 hover:scale-110 transition-transform">
+            <div className="bg-[linear-gradient(142deg,rgba(153,78,204,1)_3%,rgba(62,24,122,1)_100%)] rounded-3xl p-6 text-white flex flex-col h-full">
+              <div className="bg-white text-black w-fit px-6 py-2 rounded-full font-bold mb-6 mx-auto">
+                Advanced Program
+              </div>
+              <div className="text-center mb-6">
+                <span className="text-2xl">$</span>
+                <span className="text-8xl font-bold">699</span>
+              </div>
+              <div className="space-y-2 text-center flex-grow">
+                <p>Live Sessions (2-months)</p>
+                <p>Hands-on Projects</p>
+                <p>Certifications</p>
+                <p>Mentor Guidance</p>
+                <p>Recorded Sessions</p>
+                <p>1 Minor Project</p>
+                <p>1 Major Project</p>
+                <p>Course Completion Certificate</p>
+                <p>Microsoft Certification</p>
+                <p>Doubt Clearing Sessions</p>
+                <p>Placement Assistance</p>
+              </div>
+              <div className="border-t border-white/30 my-6"></div>
+              <button className="bg-transparent border-2 border-white text-white rounded-full py-3 px-6 font-bold hover:bg-white/10 transition-all mx-auto block">
+                CHOOSE PLAN
+              </button>
+            </div>
+          </div>
+
+          {/* Right Plan (Smaller) */}
+          <div className="transform scale-90 hover:scale-95 transition-transform">
+            <div className="bg-[linear-gradient(142deg,rgba(153,78,204,1)_3%,rgba(62,24,122,1)_100%)] rounded-3xl p-6 text-white flex flex-col h-full">
+              <div className="bg-white text-black w-fit px-6 py-2 rounded-full font-bold mb-6 mx-auto">
+                Mastery Program
+              </div>
+              <div className="text-center mb-6">
+                <span className="text-2xl">$</span>
+                <span className="text-8xl font-bold">999</span>
+              </div>
+              <div className="space-y-2 text-center flex-grow">
+                <p>Live Sessions (2-months)</p>
+                <p>Hands-on Projects</p>
+                <p>Certifications</p>
+                <p>Mentor Guidance</p>
+                <p>Recorded Sessions</p>
+                <p>1 Minor Project</p>
+                <p>1 Major Project</p>
+                <p>Course Completion Certificate</p>
+                <p>Microsoft Certification</p>
+                <p>Doubt Clearing Sessions</p>
+                <p>Placement Assistance</p>
+                <p>Mock Interview</p>
+              </div>
+              <div className="border-t border-white/30 my-6"></div>
+              <button className="bg-transparent border-2 border-white text-white rounded-full py-3 px-6 font-bold hover:bg-white/10 transition-all mx-auto block">
+                CHOOSE PLAN
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
