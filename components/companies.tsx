@@ -34,7 +34,10 @@ const SplideCarousel: React.FC = () => {
 
   return (
     <div className="splide" ref={splideRef}>
-      <div className="splide__track">
+      <div className="splide__track bg-slate-200">
+        <h1 className="justify-center text-center text-5xl pt-10 pb-20 font-bold tracking-tighter">
+          Our Alumni Work At
+        </h1>
         <ul className="splide__list">
           <li className="splide__slide">
             <Image src="/amazon.png" alt="Slide 1" width="300" height="200" />

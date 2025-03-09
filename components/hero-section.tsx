@@ -44,15 +44,15 @@ export default function HeroSection() {
           <span className="text-black font-bold"> Thinklance Edutech</span> is
           one of the finest
           <span className="text-black font-bold"> Elearning</span> platforms for
-          all students and professionals that facilitates studying
+          all students and professionals that facilitates studying &nbsp;
           <span className="text-black font-bold">
             top-notch technical certification
           </span>
-          courses from
+          &nbsp; courses from&nbsp;
           <span className="text-black font-bold">
             profound industry experts
           </span>
-          with the best study resources.
+          &nbsp; with the best study resources.
         </p>
       </div>
     </section>
