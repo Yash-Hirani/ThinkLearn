@@ -13,7 +13,6 @@ export default function Footer() {
         backgroundRepeat: "no-repeat",
       }}
     >
-      {/* Custom CSS for center underline animation */}
       <style jsx global>{`
         .center-underline {
           position: relative;
@@ -37,7 +36,6 @@ export default function Footer() {
         }
       `}</style>
 
-      {/* Semi-transparent gradient overlay that fades out toward the bottom */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-transparent"></div>
 
       <div className="container px-4 md:px-6 py-12 relative z-10">
@@ -56,19 +54,19 @@ export default function Footer() {
               skills for a better future.
             </p>
             <div className="flex space-x-4">
-              <Link href="#" className="text-gray-200 hover:text-primary">
+              <Link href="#" className="text-gray-200 hover:text-purple-400">
                 <Facebook className="h-5 w-5" />
                 <span className="sr-only">Facebook</span>
               </Link>
-              <Link href="#" className="text-gray-200 hover:text-primary">
+              <Link href="#" className="text-gray-200 hover:text-purple-400">
                 <Twitter className="h-5 w-5" />
                 <span className="sr-only">Twitter</span>
               </Link>
-              <Link href="#" className="text-gray-200 hover:text-primary">
+              <Link href="#" className="text-gray-200 hover:text-purple-400">
                 <Instagram className="h-5 w-5" />
                 <span className="sr-only">Instagram</span>
               </Link>
-              <Link href="#" className="text-gray-200 hover:text-primary">
+              <Link href="#" className="text-gray-200 hover:text-purple-400">
                 <Linkedin className="h-5 w-5" />
                 <span className="sr-only">LinkedIn</span>
               </Link>

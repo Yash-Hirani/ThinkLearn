@@ -2,9 +2,8 @@ import React, { useEffect, useRef, useState } from "react";
 import Splide from "@splidejs/splide";
 import { Options } from "@splidejs/splide";
 import "@splidejs/splide/css";
-import Image from "next/image"; // Import the correct Image component from Next.js
+import Image from "next/image";
 
-// Custom hook for Splide
 function useSplide(options?: Options) {
   const splideRef = useRef<HTMLDivElement>(null);
   const progressBarRef = useRef<HTMLDivElement>(null);
@@ -14,17 +13,17 @@ function useSplide(options?: Options) {
     if (!splideRef.current) return;
 
     const splide = new Splide(splideRef.current, {
-      type: "loop", // Enable looping
-      perPage: 1, // Show 1 image per slide
+      type: "loop",
+      perPage: 1,
       arrows: true,
       pagination: true,
       gap: "1rem",
       autoplay: true,
       interval: 3000,
-      pauseOnHover: true, // Pause when hovered
+      pauseOnHover: true,
       breakpoints: {
-        700: { perPage: 2 }, // Adjust for medium screens
-        640: { perPage: 1 }, // Adjust for small screens
+        700: { perPage: 2 },
+        640: { perPage: 1 },
       },
       ...options,
     });
@@ -84,9 +83,9 @@ const SplideSliderWithProgress: React.FC<SliderProps> = ({
                   <Image
                     src={slide.imageUrl}
                     alt="slide"
-                    fill // Fill the parent container
-                    sizes="(max-width: 768px) 100vw, 50vw" // Optimize for responsive images
-                    style={{ objectFit: "cover" }} // Ensure the image covers the container
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    style={{ objectFit: "cover" }}
                     className="rounded-lg shadow-md"
                   />
                 </div>
@@ -95,7 +94,6 @@ const SplideSliderWithProgress: React.FC<SliderProps> = ({
           </ul>
         </div>
 
-        {/* Progress bar with customizable color */}
         <div className="h-1 bg-gray-200 mt-4 rounded-full overflow-hidden">
           <div
             ref={progressBarRef}
@@ -107,7 +105,6 @@ const SplideSliderWithProgress: React.FC<SliderProps> = ({
   );
 };
 
-// Example component with images
 export const ImageSlider: React.FC = () => {
   const images = [
     { id: 1, imageUrl: "/student1.jpg" },
@@ -124,7 +121,7 @@ export const ImageSlider: React.FC = () => {
             autoplay: true,
             interval: 3000,
             pauseOnHover: true,
-            type: "loop", // Enable looping
+            type: "loop",
           }}
           progressBarColor="bg-purple-500"
           className="max-w-4xl mx-auto"

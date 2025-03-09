@@ -2,7 +2,7 @@
 import React, { useEffect, useRef } from "react";
 import Splide from "@splidejs/splide";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
-import "@splidejs/splide/css"; // Import Splide CSS
+import "@splidejs/splide/css";
 import Image from "next/image";
 
 const SplideCarousel: React.FC = () => {
@@ -11,21 +11,20 @@ const SplideCarousel: React.FC = () => {
   useEffect(() => {
     if (splideRef.current) {
       const splide = new Splide(splideRef.current, {
-        type: "loop", // Enable looping
-        drag: "free", // Allow free dragging
-        focus: "center", // Center the active slide
-        perPage: 7, // Show 5 images per slide
-        arrows: false, // Remove navigation arrows
-        pagination: false, // Remove pagination (image count from the bottom)
-        gap: "1rem", // Add space between slides
+        type: "loop",
+        drag: "free",
+        focus: "center",
+        perPage: 7,
+        arrows: false,
+        pagination: false,
+        gap: "1rem",
         autoScroll: {
-          speed: 1, // Auto-scroll speed
+          speed: 1,
         },
       });
 
       splide.mount({ AutoScroll });
 
-      // Cleanup Splide instance on unmount
       return () => {
         splide.destroy();
       };

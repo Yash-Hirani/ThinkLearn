@@ -1,10 +1,9 @@
 "use client";
 import React, { useEffect, useState } from "react";
 
-// NumberCounter Component
 type NumberCounterProps = {
-  targetNumber: number; // The number to count up to
-  duration?: number; // Duration of the animation in milliseconds
+  targetNumber: number;
+  duration?: number;
 };
 
 const NumberCounter = ({
@@ -27,15 +26,14 @@ const NumberCounter = ({
       }
     }, 16);
 
-    return () => clearInterval(timer); // Cleanup on unmount
+    return () => clearInterval(timer);
   }, [targetNumber, duration]);
 
   return <>{count}</>;
 };
 
-// StatItem Component
 interface StatItemProps {
-  count: number; // Changed to number for NumberCounter
+  count: number;
   label: string;
 }
 
@@ -50,7 +48,6 @@ const StatItem: React.FC<StatItemProps> = ({ count, label }) => {
   );
 };
 
-// StatsBanner Component
 const StatsBanner: React.FC = () => {
   const stats = [
     { count: 150000, label: "Students" },
