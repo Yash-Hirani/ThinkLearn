@@ -107,25 +107,8 @@
 
     --chart-5: 340 75% 55%
   }
-  /* Custom gradient button class */
-
-  .btn-grad {background-image: linear-gradient(to right, #232526 0%, #414345  51%, #232526  100%)}
-  .btn-grad {
-     
-     
-     transition: 0.5s;
-     background-size: 200% auto;
-     color: white;            
-     box-shadow: 0 0 20px #eee;
-     border-radius: 10px;
-     display: block;
-   }
-
-   .btn-grad:hover {
-     background-position: right center; /* change the direction of the change here */
-     color: #fff;
-     text-decoration: none;
-   }
+  
+  
   
 }
 

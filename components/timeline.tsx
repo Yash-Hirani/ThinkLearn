@@ -59,7 +59,7 @@ export default function TimelineComponent() {
       ),
     },
     {
-      title: "5. Become A Certified Professional",
+      title: "Become A Certified Professional",
       content: (
         <div className="flex items-center">
           <p className="text-neutral-200 dark:text-neutral-200 text-sm md:text-3xl font-normal mb-4">
@@ -70,7 +70,7 @@ export default function TimelineComponent() {
       ),
     },
     {
-      title: "6. Get Placed ",
+      title: "Get Placed ",
       content: (
         <div className="flex items-center">
           <p className="text-neutral-200 dark:text-neutral-200 text-sm md:text-3xl font-normal mb-4">
