@@ -79,7 +79,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/"
-                  className="text-gray-200 hover:text-primary center-underline"
+                  className="text-gray-200 hover:text-purple-400 center-underline"
                 >
                   Home
                 </Link>
@@ -87,7 +87,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/courses"
-                  className="text-gray-200 hover:text-primary center-underline"
+                  className="text-gray-200 hover:text-purple-400 center-underline"
                 >
                   All Courses
                 </Link>
@@ -95,7 +95,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/quiz"
-                  className="text-gray-200 hover:text-primary center-underline"
+                  className="text-gray-200 hover:text-purple-400 center-underline"
                 >
                   Quiz
                 </Link>
@@ -103,7 +103,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/career"
-                  className="text-gray-200 hover:text-primary center-underline"
+                  className="text-gray-200 hover:text-purple-400 center-underline"
                 >
                   Career Portal
                 </Link>
@@ -111,7 +111,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/register"
-                  className="text-gray-200 hover:text-primary center-underline"
+                  className="text-gray-200 hover:text-purple-400 center-underline"
                 >
                   Register
                 </Link>

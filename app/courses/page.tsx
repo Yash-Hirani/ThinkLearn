@@ -6,7 +6,7 @@ import { CourseFilters } from "@/components/course-filters";
 
 export default function CoursesPage() {
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-8 ">
       <div className="flex flex-col space-y-4 md:space-y-0 md:flex-row md:items-center md:justify-between mb-8">
         <div>
           <h1 className="text-3xl font-bold tracking-tight">Courses</h1>
@@ -75,10 +75,9 @@ export default function CoursesPage() {
 const courses = [
   {
     id: 1,
-    title: "Introduction to Web Development",
-    description:
-      "Learn the fundamentals of web development including HTML, CSS, and JavaScript.",
-    image: "/placeholder.svg?height=200&width=300",
+    title: "PLC fundamentals",
+    description: "",
+    image: "/images.jpeg",
     instructor: "Sarah Johnson",
     duration: "8 weeks",
     level: "Beginner",
@@ -88,10 +87,9 @@ const courses = [
   },
   {
     id: 2,
-    title: "Advanced React Patterns",
-    description:
-      "Master advanced React concepts and patterns for building scalable applications.",
-    image: "/placeholder.svg?height=200&width=300",
+    title: "Master Microcontrollers",
+    description: "",
+    image: "/images.jpeg",
     instructor: "Michael Chen",
     duration: "6 weeks",
     level: "Advanced",
@@ -101,10 +99,10 @@ const courses = [
   },
   {
     id: 3,
-    title: "UI/UX Design Principles",
+    title: "Master Microprocessors",
     description:
       "Learn essential design principles and tools for creating beautiful user interfaces.",
-    image: "/placeholder.svg?height=200&width=300",
+    image: "/images.jpeg",
     instructor: "Emma Rodriguez",
     duration: "5 weeks",
     level: "Intermediate",
@@ -114,10 +112,9 @@ const courses = [
   },
   {
     id: 4,
-    title: "Node.js Backend Development",
-    description:
-      "Build robust backend systems with Node.js, Express, and MongoDB.",
-    image: "/placeholder.svg?height=200&width=300",
+    title: "master arduino",
+    description: "Build robust backend systems with arduino.",
+    image: "/images.jpeg",
     instructor: "David Kim",
     duration: "7 weeks",
     level: "Intermediate",
@@ -127,10 +124,10 @@ const courses = [
   },
   {
     id: 5,
-    title: "Python for Data Science",
+    title: "embeded C for cell",
     description:
       "Learn Python programming for data analysis and visualization.",
-    image: "/placeholder.svg?height=200&width=300",
+    image: "/images.jpeg",
     instructor: "Lisa Wang",
     duration: "10 weeks",
     level: "Beginner",

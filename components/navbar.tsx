@@ -45,7 +45,6 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-6">
           <Link
             href="/"
@@ -72,11 +71,11 @@ export default function Navbar() {
             </span>
           </Link>
           <Link
-            href="/"
+            href="/word"
             className="flex items-center space-x-2 group no-underline hover:no-underline"
           >
             <span className="text-lg font-semibold text-black center-underline">
-              Career portal
+              Word of the day
             </span>
           </Link>
           <Link
@@ -90,7 +89,6 @@ export default function Navbar() {
           </Link>
         </nav>
 
-        {/* Mobile Menu Button */}
         <button
           className="md:hidden"
           onClick={toggleMenu}
@@ -100,7 +98,6 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Navigation */}
       <div
         className={cn(
           "fixed inset-0 top-16 z-50 grid h-[calc(100vh-4rem)] grid-flow-row auto-rows-max overflow-auto p-6 pb-32 shadow-md animate-in md:hidden bg-background",

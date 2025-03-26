@@ -7,7 +7,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Slider } from "@/components/ui/slider";
+import { PriceFilter } from "./PriceFilter";
 
 export function CourseFilters() {
   return (
@@ -59,18 +59,9 @@ export function CourseFilters() {
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="price">
-              <AccordionTrigger>Price Range</AccordionTrigger>
-              <AccordionContent>
-                <div className="space-y-4">
-                  <Slider defaultValue={[0, 100]} max={200} step={1} />
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm">$0</span>
-                    <span className="text-sm">$200+</span>
-                  </div>
-                </div>
-              </AccordionContent>
-            </AccordionItem>
+            <Accordion type="multiple" defaultValue={["price"]}>
+              <PriceFilter />
+            </Accordion>
 
             <AccordionItem value="duration">
               <AccordionTrigger>Duration</AccordionTrigger>
