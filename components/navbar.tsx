@@ -80,7 +80,7 @@ export default function Navbar() {
             </span>
           </Link>
           <Link
-            href="/courses"
+            href="/register"
             className="relative flex w-40 bg-purple-700 items-center justify-center h-12  overflow-hidden rounded-3xl shadow-md transition-all hover:scale-300 group"
           >
             <span className="absolute h-full w-full -translate-x-full  translate-y-full rotate-45 transition-all duration-700 bg-gradient-to-r from-[#DD88CF] to-[#F8E7F6] group-hover:translate-x-[25%] group-hover:translate-y-[-15%]"></span>
